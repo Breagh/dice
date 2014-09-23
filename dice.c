@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 {
    int randNum;
    int total = 0;
-   int i = 0;
+   int count = 0;
 
    if (argc != 3) {
       printf("Usage: dice <number of dice> <number of sides>\n");
@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 
    srand((unsigned)time(0));
 
-   for (i=0; i< numDice; i++) {
+   for (count=0; count< numDice; count++) {
       randNum = (rand() % sides) + 1;
       total = total + randNum;
       printf("d%d:\t%d\n", sides, randNum);
